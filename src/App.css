@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* Change font-family globally */
+  background-color: #f0f0f5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Center the content both vertically and horizontally */
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f0f5; /* Light background color */
+}
+
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Form width */
+  text-align: center; /* Center text inside form */
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  color: #333;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+button {
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  margin-top: 1rem;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Password Strength Styling */
+.password-strength {
+  margin-top: -0.75rem;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: #666;
+}
+
+.password-strength.weak {
+  color: #f00;
+}
+
+.password-strength.moderate {
+  color: #f90;
+}
+
+.password-strength.strong {
+  color: #0f0;
+}
+
+.password-strength.very-strong {
+  color: #00f;
 }
